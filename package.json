@@ -1,0 +1,45 @@
+{
+  "name": "service-calendar",
+  "version": "1.0.0",
+  "description": "room and calendar for rooms",
+  "main": "app/server.js",
+  "private": true,
+  "scripts": {
+    "dev": "set NODE_ENV=development; nodemon app/server.js",
+    "start": "NODE_ENV=production node app/server.js",
+    "test": "standard && jest --detectOpenHandles",
+    "new-module": "burj module ",
+    "create-doc": "node ./node_modules/@cowellness/cw-micro-service/app/helper/doc-generator.js"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ],
+    "globals": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:cowellness/iseo/service-calendar.git"
+  },
+  "author": "Ashwin Shetty",
+  "license": "",
+  "devDependencies": {
+    "@asyncapi/generator": "^1.0.1",
+    "burj": "^1.3.0",
+    "documentation": "^13.0.2",
+    "jest": "^26.1.0",
+    "json2yaml": "^1.1.0",
+    "pre-commit": "^1.2.2",
+    "standard": "*",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@cowellness/cw-micro-service": "^1.16.0",
+    "config": "^3.3.1",
+    "ics": "^2.27.0"
+  }
+}
